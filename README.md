@@ -4,7 +4,7 @@ A simple app to fetch images from Flickr Api and use LRU cache without using any
 
 ## App Screens
 <p align="center">
-    <img src="/media/Piczilla_demo.gif" width="320" height="480">
+    <img src="/media/Piczilla_demo.gif" width="280" height="380">
 </p>
 
 ## App features
