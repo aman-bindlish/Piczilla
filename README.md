@@ -3,9 +3,7 @@
 A simple app to fetch images from Flickr Api and use LRU cache without using any external library.
 
 ## App Screens
-<p align="center">
-  <img src="/media/Piczilla_demo.gif">
-</p>
+<img src="/media/Piczilla_demo.gif">
 
 ## App features
 * App shows random images from Flickr Api.
@@ -32,17 +30,17 @@ https://farm${this.farm}.staticflickr.com/${this.server}/${this.id}_${this.secre
 ## App structure
 App follows below structure:
 * <b>model</b>
-*    Package contains POJO class for photo from api response.
+    * Package contains POJO class for photo from api response.
 * <b>presenter</b>
-*    Package contains presenter class for view and asyncTasks for fetching image urls and bitmaps.
-*    <b>DownloadImageTask: </b> AsyncTask for downloading bitmap from given url. Also saves downloaded bitmap into cache.
-*   <b>FetchImageUrlsTask: </b> AsyncTask for fetching images urls from Flickr api in chunks of 10 images per hit. Also parses json response.
-*    <b>ImagesPresenter: </b> Presenter class containing logic to fetch image urls and check cache if any bitmap is available else download bitmap from url.
+    * Package contains presenter class for view and asyncTasks for fetching image urls and bitmaps.
+    * <b>DownloadImageTask: </b> AsyncTask for downloading bitmap from given url. Also saves downloaded bitmap into cache.
+    * <b>FetchImageUrlsTask: </b> AsyncTask for fetching images urls from Flickr api in chunks of 10 images per hit. Also parses json response.
+    * <b>ImagesPresenter: </b> Presenter class containing logic to fetch image urls and check cache if any bitmap is available else download bitmap from url.
 * <b>utils</b>
-*    Package contains utility class and generic cache class.
-*    <b>ImagesCache: </b> Common LRU cache defined class. Any changes related to cache can be done here.
-*    <b>Utility: </b> Utility class where HttpUrlConnection is defined for fetch images and download bitmaps.
+    * Package contains utility class and generic cache class.
+    * <b>ImagesCache: </b> Common LRU cache defined class. Any changes related to cache can be done here.
+    * <b>Utility: </b> Utility class where HttpUrlConnection is defined for fetch images and download bitmaps.
 * <b>view</b>
-*    Package contains UI classes which needs to be shown on app.
-*    <b>MainActivity: </b> Single activity which contains a fragment.
-*    <b>MainFragment: </b> Fragment class which contains ImageView and two buttons which will be shown to the user.
+    * Package contains UI classes which needs to be shown on app.
+    * <b>MainActivity: </b> Single activity which contains a fragment.
+    * <b>MainFragment: </b> Fragment class which contains ImageView and two buttons which will be shown to the user.
